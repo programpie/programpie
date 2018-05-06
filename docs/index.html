@@ -32,17 +32,24 @@
       color: white;
       width: 100vw;
       height: 100vh;
-      background: var(--stone);
       display: grid;
-      align-items: center;
-      justify-items: center;
       grid-template-rows: auto 1fr auto;
     }
-      header {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        align-items: center;
-      }
+    header {
+      background: var(--stone);
+      display: grid;
+      justify-items: center;
+    }
+
+    .brand {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      align-items: center;
+    }
+
+    .welcome {
+      font-size: 160%;
+    }
 
     main {
       background: white;
@@ -89,7 +96,7 @@
     }
     .emailInput {
       font-size: 105%;
-      margin-bottom: 1.5em;
+      margin: 1.5em 0;
       justify-self: stretch;
       align-self: flex-end;
       text-align: center;
@@ -113,7 +120,11 @@
       background: var(--seafoam);
     }
     footer {
-      margin: 3em 0;
+      background: var(--stone);
+      color: white;
+      margin-top: 2em;
+      padding: 2em;
+      text-align: center;
     }
 
     @media only screen and (min-width: 600px) {
@@ -125,10 +136,12 @@
   </style>
   <section class="wrapper">
     <header>
-      <figure class="programpieFigure">
-        <img class="programpieLogo" src="./img/programpie.svg" alt="programpie logo">
-      </figure>
-      <h1>Welcome to Programpie</h1>
+      <section class="brand">
+        <figure class="programpieFigure">
+          <img class="programpieLogo" src="./img/programpie.svg" alt="programpie logo">
+        </figure>
+        <h1 class="welcome">Welcome to Programpie</h1>
+      </section>
     </header>
     <main>
       <section class="form">
