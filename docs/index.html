@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Programpie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <style>
+
+    :root {
+      --seafoam: #a2c3d8;
+      --stone: #336b87;
+    }
+    @font-face {
+      font-family: "Monserrat-Regular";
+      src: url("./fonts/Montserrat-Regular.woff") format("woff");
+    }
+
+    body {
+      font-family: Monserrat-Regular;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      color: white;
+      width: 100vw;
+      height: 100vh;
+      background: var(--stone);
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      grid-template-rows: auto 1fr auto;
+    }
+      header {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+      }
+
+    main {
+      background: white;
+      color: var(--stone);
+      align-self: stretch;
+      justify-self: stretch;
+      display: grid;
+    }
+    .form {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      justify-items: center;
+      font-size: 1.5em;
+    }
+    .programpieFigure {
+      width: 5em;
+      height: 5em;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+    .programpieLogo {
+      border: 0.2em solid white;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+    .emailHeadingWrapper {
+      height: 20vh;
+      align-self: stretch;
+      justify-self: stretch;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      background: var(--seafoam);
+    }
+    .emailWrapper {
+      margin: 0 1em;
+      justify-self: stretch;
+      background: white;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+    .emailInput {
+      font-size: 105%;
+      margin-bottom: 1.5em;
+      justify-self: stretch;
+      align-self: flex-end;
+      text-align: center;
+      line-height: 200%;
+      border: none;
+      box-shadow: 0.1em 0.1em 0.1em #ccc , -1px -1px 0.1em #eee ;
+      border-radius: 5px;
+    }
+    .emailButton {
+      font-size: 80%;
+      justify-self: stretch;
+      align-self: flex-start;
+      border: none;
+      background: var(--stone);
+      color: white;
+      padding: 1em;
+      transition: background 0.5s ease-in-out;
+      border-radius: 10px;
+    }
+    .emailButton:hover {
+      background: var(--seafoam);
+    }
+    footer {
+      margin: 3em 0;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .emailInput, .emailButton {
+        justify-self: center;
+        width: 40vw;
+      }
+    }
+  </style>
+  <section class="wrapper">
+    <header>
+      <figure class="programpieFigure">
+        <img class="programpieLogo" src="./img/programpie.svg" alt="programpie logo">
+      </figure>
+      <h1>Welcome to Programpie</h1>
+    </header>
+    <main>
+      <section class="form">
+        <section class="emailHeadingWrapper">
+          <h1 class="emailHeading">Enter your email</h1>
+        </section>
+        <section class="emailWrapper">
+          <input type="email" name="email" class="emailInput" placeholder="Enter Email">
+          <input class="emailButton" type="button" value="Sign up">
+        </section>
+      </section>
+    </main>
+    <footer>
+      Programpie 2018
+      <span>&copy;</span>
+    </footer>
+  </section>
+</body>
+
+</html>
