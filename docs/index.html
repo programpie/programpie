@@ -12,11 +12,11 @@
 <body>
 
   <style>
-
     :root {
       --seafoam: #a2c3d8;
       --stone: #336b87;
     }
+
     @font-face {
       font-family: "Monserrat-Regular";
       src: url("./fonts/Montserrat-Regular.woff") format("woff");
@@ -35,6 +35,7 @@
       display: grid;
       grid-template-rows: auto 1fr auto;
     }
+
     header {
       background: var(--stone);
       display: grid;
@@ -42,6 +43,7 @@
     }
 
     .brand {
+      margin-right: 8em;
       display: grid;
       grid-auto-flow: column;
       align-items: center;
@@ -59,12 +61,14 @@
       justify-self: stretch;
       display: grid;
     }
+
     .form {
       display: grid;
       grid-template-rows: auto 1fr;
       justify-items: center;
       font-size: 140%;
     }
+
     .programpieFigure {
       margin-top: 0.8em;
       margin-bottom: 0.8em;
@@ -74,12 +78,14 @@
       align-items: center;
       justify-items: center;
     }
+
     .programpieLogo {
       border: 0.2em solid white;
       border-radius: 50%;
       width: 100%;
       height: 100%;
     }
+
     .emailHeadingWrapper {
       padding: 1em 0;
       line-height: 180%;
@@ -91,12 +97,15 @@
       justify-items: center;
       background: var(--seafoam);
     }
+
     .emailHeading {
       margin: 0;
     }
+
     .emailHeading span {
       color: white;
     }
+
     .emailWrapper {
       margin: 0 1em;
       justify-self: stretch;
@@ -118,9 +127,11 @@
       transition: background 0.5s ease-in-out;
       border-radius: 10px;
     }
+
     .emailButton:hover {
       background: var(--seafoam);
     }
+
     footer {
       background: var(--stone);
       color: white;
@@ -135,39 +146,46 @@
         justify-self: center;
       }
     }
+
     @media only screen and (min-width: 600px) {
       .emailButton {
         width: 40vw;
         justify-self: center;
       }
     }
+
+    .message {
+      margin: 2em;
+      text-align: justify;
+    }
+    .message span {
+      background: rgb(220, 220, 255);
+    }
   </style>
-  <section class="wrapper">
+  <section id="app" class="wrapper">
     <header>
       <section class="brand">
         <figure class="programpieFigure">
           <img class="programpieLogo" src="./img/programpie.svg" alt="programpie logo">
         </figure>
-        <h1 class="welcome">Welcome to Programpie</h1>
+        <h1 id="header" class="welcome">Welcome to Programpie</h1>
       </section>
     </header>
-    <main>
+    <main id="main">
       <section class="form">
         <section class="emailHeadingWrapper">
-          <h1 class="emailHeading">
-            We are preparing a <span>huge surprise</span>
-            <br>
-            For all <span>Programpie members</span>
-            <br>
-            Which will remain a <span>secret</span> for now
-            <br>
-            If you don't want to miss out on it
-            <br>
-            Join us with one click
-          </h1>
+          <h1 class="emailHeading">We are preparing a <span>huge surprise</span><br>For all <span>Programpie members</span><br>Which will remain a <span>secret</span> for now<br>If you don't want to miss out on it<br>Join us with one click</h1>
         </section>
         <section class="emailWrapper">
-          <input class="emailButton" type="button" value="Join Programpie">
+          <input
+          class="emailButton"
+          type="button"
+          value="Join Programpie"
+          onclick="
+          const name = 'Andreja'
+          header.innerHTML = `Welcome aboard ${name}`
+          main.innerHTML = `<p class='message'>In my life as a <span>software developer</span>, especially when it comes to developing software for the <span>web</span>, time and time again I have come across the same <span>problem</span> which is rarely talked about... And boy, do I wish someone introduced me to soemthing like this before. If you are a <span>hobby programmer</span>, you want to <span>get a raise</span> or maybe you plan on creating the next <span>billion dollar software product</span>, either what we have comming up might just be the <span>stepping stone</span> for you.<br><br>Soon an email carrying the <span>good news</span> and further instructions is going to fly into your inbox.</p>`
+          ">
         </section>
       </section>
     </main>
