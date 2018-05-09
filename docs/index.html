@@ -43,7 +43,7 @@
 
     .brand {
       display: grid;
-      grid-template-columns: repeat(2, auto);
+      grid-auto-flow: column;
       align-items: center;
     }
 
@@ -78,7 +78,9 @@
       height: 100%;
     }
     .emailHeadingWrapper {
-      height: 20vh;
+      padding: 1em 0;
+      line-height: 180%;
+      text-align: center;
       align-self: stretch;
       justify-self: stretch;
       display: grid;
@@ -89,6 +91,9 @@
     .emailHeading {
       margin: 0;
     }
+    .emailHeading span {
+      color: white;
+    }
     .emailWrapper {
       margin: 0 1em;
       justify-self: stretch;
@@ -97,21 +102,11 @@
       justify-items: center;
       align-items: center;
     }
-    .emailInput {
-      font-size: 105%;
-      margin: 1.5em 0;
-      justify-self: stretch;
-      align-self: flex-end;
-      text-align: center;
-      line-height: 200%;
-      border: none;
-      box-shadow: 0.1em 0.1em 0.1em #ccc , -1px -1px 0.1em #eee ;
-      border-radius: 5px;
-    }
+
     .emailButton {
+      margin-top: 1em;
       font-size: 90%;
       justify-self: stretch;
-      align-self: flex-start;
       border: none;
       background: var(--stone);
       color: white;
@@ -131,13 +126,12 @@
     }
 
     @media only screen and (min-width: 600px) {
-      .emailInput, .emailButton {
-        justify-self: center;
+      .emailButton {
         width: 40vw;
       }
     }
     @media only screen and (max-width: 400px) {
-      .emailInput, .emailButton {
+      .emailButton {
         width: 80vw;
         justify-self: center;
       }
@@ -155,11 +149,18 @@
     <main>
       <section class="form">
         <section class="emailHeadingWrapper">
-          <h1 class="emailHeading">Enter your email</h1>
+          <h1 class="emailHeading">
+            We are preparing a <span>huge surprise</span> for all <span>Programpie members</span>
+            <br>
+            Which will remain a <span>secret</span> for now
+            <br>
+            If you don't want to miss out on it
+            <br>
+            Join us with one click
+          </h1>
         </section>
         <section class="emailWrapper">
-          <input type="email" name="email" class="emailInput" placeholder="Enter email">
-          <input class="emailButton" type="button" value="Sign up">
+          <input class="emailButton" type="button" value="Join Programpie">
         </section>
       </section>
     </main>
