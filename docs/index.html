@@ -104,6 +104,7 @@
     }
 
     .emailButton {
+      min-width: 10em;
       margin-top: 1em;
       font-size: 90%;
       justify-self: stretch;
@@ -125,14 +126,15 @@
       text-align: center;
     }
 
-    @media only screen and (min-width: 600px) {
-      .emailButton {
-        width: 40vw;
-      }
-    }
     @media only screen and (max-width: 400px) {
       .emailButton {
         width: 80vw;
+        justify-self: center;
+      }
+    }
+    @media only screen and (min-width: 600px) {
+      .emailButton {
+        width: 40vw;
         justify-self: center;
       }
     }
