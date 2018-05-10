@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Programpie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+
+    <script src="app.js"></script>
+
+    <style>
+        :root {
+          --seafoam: #a2c3d8;
+          --stone: #336b87;
+        }
+    
+        @font-face {
+          font-family: "Monserrat-Regular";
+          src: url("./fonts/Montserrat-Regular.woff") format("woff");
+        }
+    
+        body {
+          font-family: Monserrat-Regular;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .wrapper {
+          color: white;
+          width: 100vw;
+          height: 100vh;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+        }
+    
+        header {
+          background: var(--stone);
+          display: grid;
+          grid-auto-flow: column;
+          justify-items: center;
+          align-items: center;
+        }
+    
+        .welcome {
+          justify-self: left;
+          font-size: 150%;
+        }
+    
+        main {
+          background: white;
+          color: var(--stone);
+          display: grid;
+          grid-template-rows: auto 1fr;
+        }
+    
+        .programpieFigure {
+          justify-self: right;
+          margin-top: 0.8em;
+          width: 4em;
+          height: 4em;
+          display: grid;
+          align-items: center;
+          justify-items: center;
+        }
+    
+        .programpieLogo {
+          border: 0.2em solid white;
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+    
+        .heading {
+          padding: 1em 0;
+          margin: 0;
+          background: var(--seafoam);
+          line-height: 180%;
+          font-size: 130%;
+          text-align: center;
+        }
+    
+        .heading span {
+          color: white;
+        }
+    
+        .signinButton {
+          margin: 1em 1em 0 1em;
+          align-self: center;
+          min-width: 10em;
+          font-size: 140%;
+          border: none;
+          background: var(--stone);
+          color: white;
+          line-height: 275%;
+          transition: background 0.5s ease-in-out;
+          border-radius: 10px;
+        }
+    
+        .signinButton:hover {
+          background: var(--seafoam);
+        }
+    
+        footer {
+          background: var(--stone);
+          color: white;
+          margin-top: 2em;
+          padding: 2em 0;
+          text-align: center;
+        }
+    
+        @media only screen and (max-width: 400px) {
+          .signinButton {
+            width: 80vw;
+            justify-self: center;
+          }
+        }
+    
+        @media only screen and (min-width: 600px) {
+          .signinButton {
+            width: 40vw;
+            justify-self: center;
+          }
+        }
+    
+        .message {
+          justify-self: center;
+          max-width: 500px;
+          font-size: 110%;
+          margin: 2em;
+          text-align: justify;
+        }
+    
+        .message span {
+          background: rgb(220, 220, 255);
+        }
+      </style>
+      <section id="app" class="wrapper">
+        <header>
+          <figure class="programpieFigure">
+            <img class="programpieLogo" src="./img/programpie.svg" alt="programpie logo">
+          </figure>
+          <h1 id="header" class="welcome">Welcome to Programpie</h1>
+        </header>
+        <main id="main">
+          <h1 class="heading">We are preparing a
+            <span>huge surprise</span>
+            <br> For new
+            <span>Programpie members</span>
+            <br> Which will remain a
+            <span>secret</span> for now
+            <br> If you don't want to miss out on it
+            <br> Join us with one click</h1>
+          <input class="signinButton" type="button" value="Join Programpie" onclick="googleLogin()">
+        </main>
+        <footer>Programpie 2018
+          <span>&copy;</span>
+        </footer>
+      </section>
+
+  </body>
+</html>
