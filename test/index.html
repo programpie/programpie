@@ -8,13 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- update the version number as needed -->
-  <script defer src="/__/firebase/5.0.1/firebase-app.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/5.0.1/firebase-auth.js"></script>
-  <!-- initialize the SDK after all desired features are loaded -->
-  <script defer src="/__/firebase/init.js"></script>
 </head>
 
 <body>
@@ -30,7 +23,7 @@
 
     @font-face {
       font-family: "Monserrat-Regular";
-      src: url("./fonts/Montserrat-Regular.woff") format("woff");
+      src: url("./public/fonts/Montserrat-Regular.woff") format("woff");
     }
 
     body {
@@ -68,6 +61,7 @@
       color: var(--stone);
       display: grid;
       grid-template-rows: auto 1fr;
+      background: #eee;
     }
 
     .imageWrapper {
@@ -182,6 +176,9 @@
       font-size: 110%;
       margin: 2em;
       text-align: justify;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     .message span {
@@ -191,20 +188,12 @@
   <section id="app" class="wrapper">
     <header>
       <section class="imageWrapper">
-        <img class="programpieLogo" src="./img/programpie.svg" alt="programpie logo">
+        <img class="programpieLogo" src="./public/img/programpie.svg" alt="programpie logo">
       </section>
       <h1 id="header" class="welcome">Welcome to Programpie</h1>
     </header>
     <main id="main">
-      <h1 class="heading">We are preparing a
-        <span>huge surprise</span>
-        <br> For new
-        <span>Programpie members</span>
-        <br> Which will remain a
-        <span>secret</span> for now
-        <br> If you don't want to miss out on it
-        <br> Join us with one click</h1>
-      <input class="signinButton" type="button" value="Join Programpie" onclick="googleLogin()">
+        <p class='message'>In my life as a <span>software developer</span>, especially when it comes to developing software for the <span>web</span>, time and time again I have come across the same <span>problem</span> which is rarely talked about... And boy, do I wish someone introduced me to soemthing like this before. If you are a <span>hobby programmer</span>, you want to <span>get a raise</span> or maybe you plan on creating the next <span>billion dollar software product</span>, either what we have comming up might just be the <span>stepping stone</span> for you.<br><br>Soon an email carrying the <span>good news</span> and further instructions is going to fly into your inbox.</p>
     </main>
     <footer>Programpie 2018
       <span>&copy;</span>
